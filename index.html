@@ -5,145 +5,86 @@
 <title>ABC Medical Store | Online Pharmacy</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-
 <style>
-:root{
-  --blue:#0d6efd;
-  --green:#198754;
-  --bg:#f4f6f9;
-}
-*{box-sizing:border-box}
 body{
   margin:0;
-  font-family:system-ui, -apple-system, Segoe UI, sans-serif;
-  background:var(--bg);
+  font-family:Arial, sans-serif;
+  background:#f4f6f9;
 }
-
-/* HEADER */
 header{
-  background:linear-gradient(135deg,#0d6efd,#0b5ed7);
+  background:#0d6efd;
   color:#fff;
   padding:20px;
 }
 header h1{margin:0}
 header p{margin:5px 0 0;font-size:14px}
 
-/* INFO BAR */
-.info-bar{
-  background:#fff;
-  display:flex;
-  justify-content:space-around;
+.banner{
+  background:#e8f0fe;
   padding:10px;
-  font-size:13px;
-  box-shadow:0 2px 6px rgba(0,0,0,.05);
+  text-align:center;
+  font-weight:bold;
 }
 
-/* MAIN */
 .container{
   max-width:1200px;
   margin:auto;
-  padding:18px;
-}
-.section-title{
-  font-size:18px;
-  margin:20px 0 10px;
+  padding:16px;
 }
 
-/* PRODUCTS */
 .products{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:16px;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:15px;
 }
+
 .product{
   background:#fff;
-  border-radius:14px;
-  padding:14px;
-  box-shadow:0 6px 15px rgba(0,0,0,.08);
+  border-radius:12px;
+  padding:12px;
+  box-shadow:0 4px 10px rgba(0,0,0,.08);
 }
 .product img{
   width:100%;
-  height:140px;
+  height:150px;
   object-fit:contain;
-  background:#f8f9fa;
-  border-radius:10px;
-}
-.badge{
-  display:inline-block;
-  background:#e7f1ff;
-  color:#0d6efd;
-  font-size:11px;
-  padding:3px 8px;
-  border-radius:20px;
-  margin-top:8px;
+  background:#fff;
 }
 .product h3{margin:8px 0 4px;font-size:16px}
 .product p{margin:0;font-size:13px;color:#555}
-.price{
-  font-weight:700;
-  margin:8px 0;
-}
-.add{
-  background:var(--green);
-  color:#fff;
-  border:none;
-  padding:10px;
-  border-radius:10px;
+.price{font-weight:bold;margin:6px 0}
+
+button{
   width:100%;
+  padding:10px;
+  border:none;
+  border-radius:8px;
+  background:#198754;
+  color:#fff;
   cursor:pointer;
-  font-size:14px;
 }
 
-/* CART */
 .cart{
   margin-top:25px;
   background:#fff;
-  padding:16px;
-  border-radius:16px;
-  box-shadow:0 6px 15px rgba(0,0,0,.08);
+  padding:15px;
+  border-radius:12px;
+  box-shadow:0 4px 10px rgba(0,0,0,.08);
 }
-.cart-items{font-size:13px;margin-bottom:8px}
-.pay{
-  width:100%;
-  padding:11px;
-  margin-top:8px;
-  border:none;
-  border-radius:10px;
-  font-size:15px;
-  cursor:pointer;
-}
-.online{background:var(--blue);color:#fff}
-.whatsapp{background:#25d366;color:#fff}
+.cart-items{font-size:13px}
+.free{color:green;font-weight:bold}
+.notfree{color:red}
 
-/* DELIVERY */
-.free{color:green;font-weight:600}
-.notfree{color:#dc3545}
-
-/* TRUST */
-.trust{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:12px;
+.qr{
+  text-align:center;
   margin-top:25px;
 }
-.trust div{
-  background:#fff;
-  padding:12px;
-  border-radius:12px;
-  text-align:center;
-  font-size:13px;
-  box-shadow:0 4px 10px rgba(0,0,0,.06);
-}
 
-/* FOOTER */
 footer{
-  margin-top:30px;
-  background:#fff;
-  padding:15px;
-  font-size:12px;
   text-align:center;
+  font-size:12px;
   color:#666;
+  padding:15px;
 }
 </style>
 </head>
@@ -152,98 +93,118 @@ footer{
 
 <header>
   <h1>ABC Medical Store</h1>
-  <p>Licensed Pharmacy • Fast Local Delivery</p>
+  <p>Licensed Local Pharmacy • Fast Home Delivery</p>
 </header>
 
-<div class="info-bar">
-  <div>🚚 Free Delivery ₹300+</div>
-  <div>💊 Genuine Medicines</div>
-  <div>📞 Order on WhatsApp</div>
+<div class="banner">
+🚚 Free Delivery on Orders ₹300 & Above (Local Area)
 </div>
 
 <div class="container">
 
-<h2 class="section-title">Popular Medicines</h2>
-
 <div class="products">
 
-  <div class="product">
-    <img src="C:\Users\OMKAR\Downloads\paracetamol-500mg.jpg">
-    <span class="badge">Pain Relief</span>
-    <h3>Paracetamol 500mg</h3>
-    <p>10 tablets</p>
-    <div class="price">₹50</div>
-    <button class="add" onclick="addItem('Paracetamol 500mg',50)">Add to Cart</button>
-  </div>
+<div class="product">
+<img src="https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/iyq0mbxrdx1dbxsnkz4q.jpg">
+<h3>Paracetamol 500mg</h3>
+<p>10 tablets</p>
+<div class="price">₹50</div>
+<button onclick="addItem('Paracetamol 500mg',50)">Add to Cart</button>
+</div>
 
-  <div class="product">
-    <img src="C:\Users\OMKAR\Downloads\vitamin c tablets.png">
-    <span class="badge">Immunity</span>
-    <h3>Vitamin C Tablets</h3>
-    <p>20 tablets</p>
-    <div class="price">₹120</div>
-    <button class="add" onclick="addItem('Vitamin C Tablets',120)">Add to Cart</button>
-  </div>
+<div class="product">
+<img src="https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/x9myl5wq9nj4gkfqpmcw.jpg">
+<h3>Crocin Advance</h3>
+<p>15 tablets</p>
+<div class="price">₹65</div>
+<button onclick="addItem('Crocin Advance',65)">Add to Cart</button>
+</div>
 
-  <div class="product">
-    <img src="https://via.placeholder.com/300x200?text=Cough+Syrup">
-    <span class="badge">Cold & Cough</span>
-    <h3>Cough Syrup</h3>
-    <p>100 ml</p>
-    <div class="price">₹150</div>
-    <button class="add" onclick="addItem('Cough Syrup',150)">Add to Cart</button>
-  </div>
+<div class="product">
+<img src="https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/sqbgj5kltov1sb9xxpss.jpg">
+<h3>Vitamin C Tablets</h3>
+<p>20 tablets</p>
+<div class="price">₹120</div>
+<button onclick="addItem('Vitamin C Tablets',120)">Add to Cart</button>
+</div>
 
-  <div class="product">
-    <img src="https://via.placeholder.com/300x200?text=Antacid">
-    <span class="badge">Digestion</span>
-    <h3>Antacid Tablets</h3>
-    <p>15 tablets</p>
-    <div class="price">₹90</div>
-    <button class="add" onclick="addItem('Antacid Tablets',90)">Add to Cart</button>
-  </div>
+<div class="product">
+<img src="https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/pqjzv0gkhyfn0lrn5pks.jpg">
+<h3>ORS Sachets</h3>
+<p>5 sachets</p>
+<div class="price">₹60</div>
+<button onclick="addItem('ORS Sachets',60)">Add to Cart</button>
+</div>
 
-  <div class="product">
-    <img src="https://via.placeholder.com/300x200?text=ORS">
-    <span class="badge">Hydration</span>
-    <h3>ORS Sachets</h3>
-    <p>5 sachets</p>
-    <div class="price">₹60</div>
-    <button class="add" onclick="addItem('ORS Sachets',60)">Add to Cart</button>
-  </div>
+<div class="product">
+<img src="https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/qcdgtd5tt9ppl7jtp0kh.jpg">
+<h3>Antacid Tablets</h3>
+<p>15 tablets</p>
+<div class="price">₹90</div>
+<button onclick="addItem('Antacid Tablets',90)">Add to Cart</button>
+</div>
 
-  <div class="product">
-    <img src="https://via.placeholder.com/300x200?text=Allergy">
-    <span class="badge">Allergy</span>
-    <h3>Allergy Relief Tablet</h3>
-    <p>10 tablets</p>
-    <div class="price">₹110</div>
-    <button class="add" onclick="addItem('Allergy Relief Tablet',110)">Add to Cart</button>
-  </div>
+<div class="product">
+<img src="https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/ib0gkns1twsmn7g1ofvg.jpg">
+<h3>Cough Syrup</h3>
+<p>100 ml</p>
+<div class="price">₹150</div>
+<button onclick="addItem('Cough Syrup',150)">Add to Cart</button>
+</div>
+
+<div class="product">
+<img src="https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/bphh3h0v3yz9cdddhp2d.jpg">
+<h3>Allergy Relief Tablet</h3>
+<p>10 tablets</p>
+<div class="price">₹110</div>
+<button onclick="addItem('Allergy Relief Tablet',110)">Add to Cart</button>
+</div>
+
+<div class="product">
+<img src="https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/hy8zwxk2dr5gk2ktzpkf.jpg">
+<h3>Pain Relief Gel</h3>
+<p>30g</p>
+<div class="price">₹140</div>
+<button onclick="addItem('Pain Relief Gel',140)">Add to Cart</button>
+</div>
+
+<div class="product">
+<img src="https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/hhx6od7jw1exrwhhtjfi.jpg">
+<h3>Cold Tablets</h3>
+<p>10 tablets</p>
+<div class="price">₹85</div>
+<button onclick="addItem('Cold Tablets',85)">Add to Cart</button>
+</div>
+
+<div class="product">
+<img src="https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/g4wx7ut7rsyiqlpp6zxr.jpg">
+<h3>Digestion Tablets</h3>
+<p>15 tablets</p>
+<div class="price">₹95</div>
+<button onclick="addItem('Digestion Tablets',95)">Add to Cart</button>
+</div>
 
 </div>
 
 <div class="cart">
-  <h3>🛒 Your Order</h3>
-  <div id="items" class="cart-items">No items added</div>
-  <p><strong>Total:</strong> ₹<span id="total">0</span></p>
-  <p id="delivery"></p>
+<h3>🛒 Your Order</h3>
+<div id="items" class="cart-items">No items added</div>
+<p><strong>Total:</strong> ₹<span id="total">0</span></p>
+<p id="delivery"></p>
 
-  <button class="pay online" onclick="payNow()">Pay Online (Demo)</button>
-  <button class="pay whatsapp" onclick="orderWhatsApp()">Order via WhatsApp</button>
+<button style="background:#25d366" onclick="orderWhatsApp()">Order on WhatsApp</button>
 </div>
 
-<div class="trust">
-  <div>✅ Licensed Pharmacist</div>
-  <div>🕒 Same-Day Delivery</div>
-  <div>🔒 Secure Payments</div>
-  <div>📍 Local Store Support</div>
+<div class="qr">
+<h3>Pay via UPI</h3>
+<p>UPI ID: <strong>omkar2601@ptyes</strong></p>
+<img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=upi://pay?pa=omkar2601@ptyes">
 </div>
 
 </div>
 
 <footer>
-Medicines sold against valid prescription where applicable.<br>
+Medicines sold against valid prescription where required.<br>
 © 2026 ABC Medical Store
 </footer>
 
@@ -257,28 +218,12 @@ function addItem(name,price){
   document.getElementById("total").innerText=total;
   document.getElementById("delivery").innerHTML =
     total>=300 ? "<span class='free'>Free Delivery Applied</span>" :
-    "<span class='notfree'>Delivery charges apply (₹300+ free)</span>";
+    "<span class='notfree'>Delivery charges apply</span>";
 }
 
 function orderWhatsApp(){
   let msg="Hello ABC Medical Store,%0A%0AI want to order:%0A"+cart.join("%0A")+"%0A%0ATotal: ₹"+total;
-  window.open("https://wa.me/919999999999?text="+msg,"_blank");
-}
-
-function payNow(){
-  if(total===0){alert("Add medicines first");return;}
-  var options={
-    key:"rzp_test_1DP5mmOlF5G5ag",
-    amount:total*100,
-    currency:"INR",
-    name:"ABC Medical Store",
-    description:"Medicine Purchase (Demo)",
-    handler:function(r){
-      alert("Payment Successful (Demo)\nID: "+r.razorpay_payment_id);
-    },
-    theme:{color:"#0d6efd"}
-  };
-  new Razorpay(options).open();
+  window.open("https://wa.me/918591567089?text="+msg,"_blank");
 }
 </script>
 
